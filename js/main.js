@@ -14,17 +14,22 @@
   }
 
   if (toggle && nav) {
+    const setNavOpen = (open) => {
+      toggle.setAttribute("aria-expanded", String(open));
+      nav.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-label", open ? "Lukk meny" : "Åpne meny");
+    };
+
     toggle.addEventListener("click", () => {
-      const open = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", String(!open));
-      nav.classList.toggle("is-open", !open);
+      setNavOpen(toggle.getAttribute("aria-expanded") !== "true");
     });
 
     nav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        toggle.setAttribute("aria-expanded", "false");
-        nav.classList.remove("is-open");
-      });
+      link.addEventListener("click", () => setNavOpen(false));
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") setNavOpen(false);
     });
   }
 
@@ -50,6 +55,25 @@
   if (form) {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
+      const data = new FormData(form);
+      const lines = [
+        "Ny forespørsel fra nettsiden",
+        "",
+        "Navn: " + (data.get("navn") || ""),
+        "Telefon: " + (data.get("telefon") || ""),
+        "E-post: " + (data.get("epost") || ""),
+        "Type: " + (data.get("type") || ""),
+        "",
+        "Beskrivelse:",
+        data.get("beskrivelse") || "",
+      ];
+      const mailto =
+        "mailto:erikandersenskogli@gmail.com" +
+        "?subject=" +
+        encodeURIComponent("Forespørsel — Fokus Bygg") +
+        "&body=" +
+        encodeURIComponent(lines.join("\n"));
+      window.location.href = mailto;
       const success = document.querySelector("#form-success");
       if (success) {
         success.classList.add("is-visible");
