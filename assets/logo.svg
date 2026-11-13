@@ -1,11 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Fokus Bygg & Maskinservice">
-  <rect width="120" height="120" fill="#0d0d0d"/>
-  <!-- House roof + excavator arm silhouette (brand mark) -->
-  <path d="M18 72 L58 28 L72 40 L72 52 L58 42 L28 72 Z" fill="#f2f2f0"/>
-  <rect x="42" y="62" width="20" height="18" fill="#f2f2f0"/>
-  <path d="M52 62 V80 M42 71 H62" stroke="#0d0d0d" stroke-width="2.5"/>
-  <path d="M70 40 L98 62 L90 70 L74 54 L68 60 L62 52 Z" fill="#ffcc00"/>
-  <path d="M88 66 L108 82 L100 90 L82 74 Z" fill="#ffcc00"/>
-  <circle cx="72" cy="50" r="5" fill="#ffcc00"/>
-  <circle cx="72" cy="50" r="2.2" fill="#0d0d0d"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80" role="img" aria-label="Fokus Bygg & Maskinservice">
+  <!-- Icon mark only — transparent background -->
+  <path d="M14 58 L52 18 L58 23 L22 61 Z" fill="#FFCC00"/>
+  <path d="M22 61 L58 23 L64 28 L30 64 Z" fill="#9A9A9A"/>
+  <path d="M30 64 L64 28 L70 33 L38 66 Z" fill="#E8E8E8"/>
+  <rect x="46" y="42" width="16" height="14" fill="#FFCC00"/>
+  <path d="M54 42 V56 M46 49 H62" stroke="#0D0D0D" stroke-width="1.6"/>
+  <path d="M68 30 L98 52 L92 58 L74 42 L70 46 L64 40 Z" fill="#FFCC00"/>
+  <path d="M90 54 L106 68 L100 74 L86 60 Z" fill="#FFCC00"/>
+  <circle cx="70" cy="38" r="4" fill="#FFCC00"/>
+  <circle cx="70" cy="38" r="1.8" fill="#0D0D0D"/>
 </svg>

@@ -89,13 +89,14 @@ p { margin: 0 0 1rem; color: var(--silver); }
   gap: 0.7rem;
   min-width: 0;
 }
-/* Transparent brand icon PNG; HTML text stays «Bygg & Maskinservice» */
+/* Transparent icon-only PNG; company name stays as HTML text */
 .brand__mark {
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 2.85rem;
+  height: 2.85rem;
   flex-shrink: 0;
   object-fit: contain;
-  background: transparent;
+  background: transparent !important;
+  border-radius: 0;
 }
 .site-footer .brand__mark {
   width: 2.4rem;
@@ -380,6 +381,50 @@ p { margin: 0 0 1rem; color: var(--silver); }
   color: var(--yellow);
 }
 .service-item a:hover { text-decoration: underline; }
+
+.section-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2.25rem;
+}
+
+.trust-list { margin-top: 0.5rem; }
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.trust-item {
+  padding: 1.25rem 0 1.25rem 1.15rem;
+  border-left: 3px solid var(--yellow);
+}
+.trust-item h3 {
+  font-size: 1.15rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+.trust-item p {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.phone-stack {
+  display: grid;
+  gap: 0.35rem;
+}
+.phone-stack a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Mobile sticky call bar */
+.mobile-callbar {
+  display: none;
+}
 
 /* Split */
 .split {
@@ -680,6 +725,7 @@ p { margin: 0 0 1rem; color: var(--silver); }
 
 @media (max-width: 900px) {
   .services-grid,
+  .trust-grid,
   .split,
   .contact-grid,
   .footer-grid,
@@ -704,18 +750,53 @@ p { margin: 0 0 1rem; color: var(--silver); }
   .nav-cta {
     margin-top: 0.7rem;
     justify-content: center;
+    text-align: center;
     clip-path: none;
   }
   .hero { align-items: end; padding-bottom: 3rem; }
   .hero__slash { width: 80%; opacity: 0.7; }
   .form__row { grid-template-columns: 1fr; }
   .cta-band::after { display: none; }
+  .cta-band .btn-group { width: 100%; }
+  .service-detail { gap: 1rem; padding: 2rem 0; }
+  .service-detail__media img { min-height: 12rem; }
+}
+
+@media (max-width: 720px) {
+  body { padding-bottom: 3.6rem; }
+  .mobile-callbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: fixed;
+    inset: auto 0 0;
+    z-index: 90;
+    border-top: 2px solid var(--yellow);
+    background: rgba(13, 13, 13, 0.97);
+    backdrop-filter: blur(8px);
+  }
+  .mobile-callbar a {
+    padding: 0.95rem 0.5rem;
+    text-align: center;
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--yellow);
+  }
+  .mobile-callbar a + a {
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+  }
 }
 
 @media (max-width: 560px) {
-  .brand__tag { display: none; }
+  .brand__tag {
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+  }
   .btn-group { width: 100%; }
   .btn-group .btn { flex: 1 1 100%; }
+  .hero__brand { font-size: clamp(2.4rem, 14vw, 3.2rem); }
+  .hero__support { font-size: 1rem; }
+  .page-hero { padding-bottom: 2.25rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
