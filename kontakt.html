@@ -4,12 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kontakt | Fokus Bygg &amp; Maskinservice</title>
-  <meta name="description" content="Kontakt Fokus Bygg &amp; Maskinservice.">
+  <meta name="description" content="Kontakt Fokus Bygg &amp; Maskinservice. Ring 969 12 822 eller 973 40 531, eller send forespørsel.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/logo-icon.png">
 </head>
 <body>
   <a class="skip-link" href="#innhold">Hopp til innhold</a>
@@ -17,7 +18,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html" aria-label="Fokus Bygg &amp; Maskinservice — forsiden">
-        <img class="brand__mark" src="assets/logo.png" width="48" height="48" alt="">
+        <img class="brand__mark" src="assets/logo-icon.png" width="48" height="48" alt="">
         <span class="brand__text">
           <span class="brand__name">Fokus</span>
           <span class="brand__tag">Bygg &amp; Maskinservice</span>
@@ -31,7 +32,7 @@
         <a href="tjenester.html">Tjenester</a>
         <a href="om-oss.html">Om oss</a>
         <a href="kontakt.html" aria-current="page">Kontakt</a>
-        <a class="nav-cta" href="kontakt.html">Kontakt</a>
+        <a class="nav-cta" href="tel:+4796912822">Ring oss</a>
       </nav>
     </div>
   </header>
@@ -41,7 +42,11 @@
       <div class="container">
         <p class="section__eyebrow">Ta kontakt</p>
         <h1>Kontakt</h1>
-        <p>Send en forespørsel eller skriv på e-post.</p>
+        <p>Ring for en rask avklaring, eller fyll ut skjemaet — så tar vi kontakt så snart vi kan.</p>
+        <div class="btn-group" style="margin-top:1.25rem">
+          <a class="btn btn--primary" href="tel:+4796912822">969 12 822</a>
+          <a class="btn btn--ghost" href="tel:+4797340531">973 40 531</a>
+        </div>
       </div>
     </header>
 
@@ -51,35 +56,35 @@
           <h2 class="section__title" style="margin-bottom:1.5rem">Direkte</h2>
           <dl class="contact-facts">
             <div class="contact-fact">
-              <dt>E-post</dt>
-              <dd><a href="mailto:erikandersenskogli@gmail.com">erikandersenskogli@gmail.com</a></dd>
-            </div>
-            <div class="contact-fact">
               <dt>Telefon</dt>
-              <dd>
-                <a href="tel:+4796912822">969 12 822</a><br>
+              <dd class="phone-stack">
+                <a href="tel:+4796912822">969 12 822</a>
                 <a href="tel:+4797340531">973 40 531</a>
               </dd>
             </div>
             <div class="contact-fact">
-              <dt>Adresse</dt>
-              <dd>Oppgis snart</dd>
+              <dt>E-post</dt>
+              <dd><a href="mailto:erikandersenskogli@gmail.com">erikandersenskogli@gmail.com</a></dd>
             </div>
             <div class="contact-fact">
               <dt>Åpningstid</dt>
-              <dd>Man–fre 07:00–16:00</dd>
+              <dd>Man–fre 07:00–16:00<br><span class="placeholder-note">Utenom tid: legg igjen beskjed eller send forespørsel</span></dd>
+            </div>
+            <div class="contact-fact">
+              <dt>Adresse / base</dt>
+              <dd>Oppgis snart</dd>
             </div>
           </dl>
           <div class="btn-group" style="margin-top:2rem">
             <a class="btn btn--primary" href="tel:+4796912822">Ring 969 12 822</a>
-            <a class="btn btn--ghost" href="tel:+4797340531">Ring 973 40 531</a>
+            <a class="btn btn--ghost" href="mailto:erikandersenskogli@gmail.com">Send e-post</a>
           </div>
         </div>
 
         <div class="reveal">
           <form class="form" id="kontakt-form" action="#" method="post" novalidate>
             <h2 style="font-size:1.25rem;color:var(--white);margin:0 0 0.25rem">Send forespørsel</h2>
-            <p class="form__note">Skjemaet åpner e-posten din ferdig utfylt.</p>
+            <p class="form__note">Skjemaet åpner e-posten din ferdig utfylt. Du kan også ringe direkte.</p>
 
             <div class="form__row">
               <label>
@@ -104,18 +109,18 @@
                 <option value="bygg">Bygg</option>
                 <option value="maskin">Maskin / service</option>
                 <option value="anlegg">Anlegg</option>
-                <option value="annet">Annet</option>
+                <option value="annet">Annet / usikker</option>
               </select>
             </label>
 
             <label>
               Beskrivelse
-              <textarea name="beskrivelse" required placeholder="Kort om prosjekt og sted"></textarea>
+              <textarea name="beskrivelse" required placeholder="Kort om prosjekt, sted og ønsket tidsrom"></textarea>
             </label>
 
-            <button class="btn btn--primary" type="submit">Send</button>
+            <button class="btn btn--primary" type="submit">Send forespørsel</button>
             <div class="form-success" id="form-success" tabindex="-1" role="status">
-              Takk — e-postvinduet skal åpne seg. Ellers skriv til erikandersenskogli@gmail.com.
+              Takk — e-postvinduet skal åpne seg. Ellers skriv til erikandersenskogli@gmail.com, eller ring 969 12 822 / 973 40 531.
             </div>
           </form>
         </div>
@@ -128,13 +133,13 @@
       <div class="footer-grid">
         <div>
           <a class="brand" href="index.html">
-            <img class="brand__mark" src="assets/logo.png" width="40" height="40" alt="">
+            <img class="brand__mark" src="assets/logo-icon.png" width="40" height="40" alt="">
             <span class="brand__text">
               <span class="brand__name">Fokus</span>
               <span class="brand__tag">Bygg &amp; Maskinservice</span>
             </span>
           </a>
-          <p style="margin-top:1rem">fokusbyggogmaskinservice.no</p>
+          <p style="margin-top:1rem">Bygg, maskinservice og anlegg.<br>fokusbyggogmaskinservice.no</p>
         </div>
         <div class="footer-col">
           <h3>Sider</h3>
@@ -146,10 +151,8 @@
         <div class="footer-col">
           <h3>Kontakt</h3>
           <a href="mailto:erikandersenskogli@gmail.com">erikandersenskogli@gmail.com</a>
-          <p>Telefon:<br>
-            <a href="tel:+4796912822">969 12 822</a><br>
-            <a href="tel:+4797340531">973 40 531</a>
-          </p>
+          <a href="tel:+4796912822">969 12 822</a>
+          <a href="tel:+4797340531">973 40 531</a>
           <p>Org.nr: Oppgis snart</p>
         </div>
       </div>
@@ -159,6 +162,11 @@
       </div>
     </div>
   </footer>
+
+  <div class="mobile-callbar" role="navigation" aria-label="Ring oss">
+    <a href="tel:+4796912822">969 12 822</a>
+    <a href="tel:+4797340531">973 40 531</a>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
